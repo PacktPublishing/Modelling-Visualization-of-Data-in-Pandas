@@ -1,0 +1,20 @@
+Code for transpose & multi-index frame method in Pandas
+***************************************************************************
+
+from pandas_datareader import data
+
+import pandas as pd
+
+companies = ["MSFT", "GOOG", "AAPL" , "AMZN"]
+
+p = data.DataReader(name = companies , data_source = "yahoo" , start = "2016-01-01", end = "2016-12-31")
+
+p
+
+p1 = p.transpose(2,1,0)
+
+p.to_frame()
+
+
+***************************************************************************
+

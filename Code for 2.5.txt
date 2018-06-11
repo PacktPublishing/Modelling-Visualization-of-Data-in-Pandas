@@ -1,0 +1,25 @@
+Code for Importing data from Excel and exporting data to excel
+***************************************************************************
+
+import pandas as pd
+
+import numpy as py
+
+# Reading First Sheet of Excel
+
+df = pd.read_excel("C:/Users/sai ram/Desktop/testexcel.xlsx")
+
+df
+
+#Reading Multiple Sheets of Excel file 
+
+df = pd.read_excel("C:/Users/sai ram/Desktop/testexcel.xlsx" , sheetname = [0,1])
+
+df
+
+# How to export data to excel
+
+df[0].to_excel("C:/Users/sai ram/Desktop/testexcelout.xlsx")
+
+***************************************************************************
+

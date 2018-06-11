@@ -1,0 +1,15 @@
+import pandas as pd
+
+import numpy as np
+
+%matplotlib inline
+
+import matplotlib
+matplotlib.style.use('ggplot')
+
+dfpie = pd.read_csv("C:/Users/sai ram/Desktop/test1.csv")
+
+dfpie
+
+dfpie.plot.pie(y='age')
+

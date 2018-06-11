@@ -1,0 +1,24 @@
+Code for exporting dataframe as CSV file in Pandas
+***************************************************************************
+
+from pandas_datareader import data
+
+import pandas as pd
+
+import numpy as np
+
+data_source = 'yahoo'
+
+start_date = '2000-10-01'
+
+end_date = '2016-12-31'
+
+dataframe1 = data.DataReader('AAPL', data_source, start_date, end_date)
+
+dataframe1
+
+dataframe1.to_csv("C:/Users/sai ram/Desktop/stock.csv")
+
+
+***************************************************************************
+

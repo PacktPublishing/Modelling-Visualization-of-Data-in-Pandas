@@ -1,0 +1,13 @@
+import numpy as np
+%matplotlib inline
+
+import pandas as pd
+
+import matplotlib
+matplotlib.style.use('ggplot')
+
+dfbar = pd.read_csv("C:/Users/sai ram/Desktop/test1.csv")
+
+dfbar
+
+dfbar.plot.bar(x='age',y='savings')

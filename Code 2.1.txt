@@ -1,0 +1,27 @@
+Code for Panel Object Attributes
+***************************************************************************
+
+from pandas_datareader import data
+
+import pandas as pd
+
+companies = ["MSFT", "GOOG", "AAPL" , "YHOO" , "AMZN"]
+
+p = data.DataReader(name = companies , data_source = "yahoo" , start = "2016-01-01", end = "2016-12-31")
+
+p
+
+p.items
+
+p.axes
+
+p.shape
+
+p.size
+
+p.minor_axis
+
+p.dtypes
+
+***************************************************************************
+

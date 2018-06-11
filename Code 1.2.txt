@@ -1,0 +1,49 @@
+Code for Simple Rate of Return
+***************************************************************************
+
+from pandas_datareader import data
+
+import pandas as pd
+
+data_source = 'yahoo'
+
+start_date = '1995-01-01'
+
+end_date = '2016-12-31'
+
+panel_data = data.DataReader('AAPL', data_source, start_date, end_date)
+
+panel_data
+
+
+panel_data['simple_return'] = (panel_data['Adj Close'] / panel_data['Adj Close'].shift(1)) - 1
+
+panel_data['simple_return']
+
+
+**************************************************************************
+
+Code for Logarithmic Rate of Return
+**************************************************************************
+from pandas_datareader import data
+
+import pandas as pd
+
+import numpy as np
+
+data_source = 'yahoo'
+
+start_date = '1995-01-01'
+
+end_date = '2016-12-31'
+
+panel_data = data.DataReader('AAPL', data_source, start_date, end_date)
+
+panel_data
+
+panel_data['log_return'] = np.log(panel_data['Adj Close'] / panel_data['Adj Close'].shift(1))
+
+panel_data['log_return']
+
+***************************************************************************
+

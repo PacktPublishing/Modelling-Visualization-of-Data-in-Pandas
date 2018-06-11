@@ -1,0 +1,38 @@
+
+Code for rate of return for indices
+
+
+***************************************************************************
+
+import numpy as np
+
+import pandas as pd
+
+from pandas_datareader import data
+
+#import matplotlib.pyplot as plt
+
+stocks = ['F', 'GM', 'MSFT','AAPL']
+
+data_source = 'yahoo'
+
+start = '1995-01-01'
+
+end = '2016-12-31'    
+
+panel_data = data.DataReader(stocks, data_source, start_date, end_date)['Adj Close']
+
+panel_data
+
+
+
+indices_returns = (panel_data / panel_data.shift(1)) - 1
+
+indices_returns
+
+
+annual_average_indices_returns  =  indices_returns.mean() *250
+
+annual_average_indices_returns
+
+***********************************************************************************

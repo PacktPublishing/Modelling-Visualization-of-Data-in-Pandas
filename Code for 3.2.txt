@@ -1,0 +1,14 @@
+import pandas as pd
+
+import numpy as np
+
+%matplotlib inline
+
+import matplotlib
+matplotlib.style.use('ggplot')
+
+dfline = pd.read_csv("C:/Users/sai ram/Desktop/test1.csv")
+
+dfline
+
+dfline.plot.line()

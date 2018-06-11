@@ -1,0 +1,20 @@
+import numpy as np
+%matplotlib inline
+
+import pandas as pd
+
+import matplotlib
+matplotlib.style.use('ggplot')
+
+dfhist = pd.read_csv("C:/Users/sai ram/Desktop/test1.csv")
+
+dfhist
+
+dfhist.plot.hist(x='age',y='savings')
+
+dfhist.age.plot.hist()
+
+dfhist.savings.plot.hist()
+
+dfhist.plot.hist(stacked=True)
+

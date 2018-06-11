@@ -1,0 +1,22 @@
+Code for loc , iloc & ix method in Pandas
+***************************************************************************
+
+from pandas_datareader import data
+
+import pandas as pd
+
+companies = ["MSFT", "GOOG", "AAPL" , "AMZN"]
+
+p = data.DataReader(name = companies , data_source = "yahoo" , start = "2016-01-01", end = "2016-12-31")
+
+p
+
+p.loc["High","2016-01-04","GOOG"]
+
+p.iloc[2,250,2]
+
+p.ix["High",250,"AMZN"]
+
+
+***************************************************************************
+
